@@ -1,3 +1,7 @@
+/* MOBILE  */
+
+
+/* CABEÇALHO */
 .menu {
     display: flex;
     justify-content: space-evenly;
@@ -6,13 +10,97 @@
     column-gap: 60px;
 }
 
+    /* CATEGORIAS */
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+    /* DESTAQUES  */
+.destaques {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.destaques__barra {
+    flex-grow: 1;
+}
+
+    /* EVENTOS  */
+.eventos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.eventos__item {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.eventos__item:nth-child(5), .eventos__item:nth-child(6) {
+    display: none;
+}
+
+    /* AGENDA  */
+.agenda__lista {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    justify-content: center;
+}
+
+.agenda__item {
+    flex-grow: 1;
+}
+
+.agenda__item:nth-child(5), .agenda__item:nth-child(6) {
+    display: none;
+}
+
+    /* TABLET  */
+
 @media (min-width: 720px) {
+
+    /* CABEÇALHO */
     .menu {
         column-gap: 80px;
     }
+    /* CATEGORIAS  */
+
+    .categorias__lista {
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }
+
+        /* EVENTOS  */
+    .eventos__lista {
+        justify-content: end;
+    }
+
+    .eventos__item:nth-child(4), .eventos__item:nth-child(2) {
+        display: none;
+    }
+
+        /* AGENDA   */
+    .agenda__lista {
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+        
+    }
 }
 
+
+        /* DESKTOP  */
+
 @media (min-width: 1440px) {
+
+    /* CABEÇALHO */
     .menu {
         column-gap: 105px;
         flex-wrap: nowrap;
@@ -36,5 +124,30 @@
 
     .menu__item:nth-child(5) {
         order: 2;
+    }
+
+    .eventos__lista {
+        justify-content: end;
+    }
+
+    .eventos__item:nth-child(5), .eventos__item:nth-child(6) {
+        display: block;
+    }
+
+    .agenda__item {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .agenda__lista {
+    justify-content: center;
+    }
+
+    .agenda__item:nth-child(5), .agenda__item:nth-child(6) {
+        display: block;
+    }
+
+    .agenda__botao {
+        justify-content: center;
     }
 }
