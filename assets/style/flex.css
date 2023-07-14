@@ -42,7 +42,7 @@
     max-width: 400px;
 }
 
-.eventos__item:nth-child(5), .eventos__item:nth-child(6) {
+.eventos__item:nth-child(5), .eventos__item:nth-child(6), .eventos__item:nth-child(7), .eventos__item:nth-child(8) {
     display: none;
 }
 
@@ -61,6 +61,18 @@
 .agenda__item:nth-child(5), .agenda__item:nth-child(6) {
     display: none;
 }
+
+ /* RODAPÉ  */
+
+ .rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+
+ .rodape__logo {
+    align-self: end;
+ }
 
     /* TABLET  */
 
@@ -83,7 +95,7 @@
         justify-content: end;
     }
 
-    .eventos__item:nth-child(4), .eventos__item:nth-child(2) {
+    .eventos__item:nth-child(7), .eventos__item:nth-child(8) {
         display: none;
     }
 
@@ -91,7 +103,7 @@
     .agenda__lista {
         column-gap: 1.5rem;
         row-gap: 1rem;
-        
+        justify-content: end;
     }
 }
 
@@ -130,7 +142,7 @@
         justify-content: end;
     }
 
-    .eventos__item:nth-child(5), .eventos__item:nth-child(6) {
+    .eventos__item:nth-child(5), .eventos__item:nth-child(6), .eventos__item:nth-child(7), .eventos__item:nth-child(8) {
         display: block;
     }
 
@@ -140,14 +152,12 @@
     }
 
     .agenda__lista {
-    justify-content: center;
+    justify-content: end;
     }
 
     .agenda__item:nth-child(5), .agenda__item:nth-child(6) {
         display: block;
     }
 
-    .agenda__botao {
-        justify-content: center;
-    }
+   
 }
